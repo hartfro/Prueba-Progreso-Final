@@ -1,4 +1,6 @@
-﻿namespace AntonellaCortes_PROGRESOFINAL;
+﻿using AntonellaCortes_PROGRESOFINAL.ACData;
+
+namespace AntonellaCortes_PROGRESOFINAL;
 
 public static class MauiProgram
 {
@@ -12,7 +14,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-
+        string dbPath = FileAccessHelper.GetLocalFilePath("game.db3");
+		builder.Services.AddSingleton<ACGameDataBase>(s => ActivatorUtilities.CreateInstance<ACGameDataBase>(s, dbPath));
 		return builder.Build();
-	}
+    }
 }

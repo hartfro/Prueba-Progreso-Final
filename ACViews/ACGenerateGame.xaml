@@ -41,70 +41,70 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Label
-                x:Name="JuegoRandom"
-                Text="{Binding title}"
-                SemanticProperties.HeadingLevel="Level3"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="desc"
-                Text="{Binding short_description}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="genero"
-                Text="{Binding genre}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="platforma"
-                Text="{Binding platform}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="pub"
-                Text="{Binding publisher}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="dev"
-                Text="{Binding developer}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                x:Name="estreno"
-                Text="{Binding release_date}"
-                SemanticProperties.HeadingLevel="Level4"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label Text="Fecha" />
-            <Label x:Name="fuente"
-                Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
-                <Label.BindingContext>
-                    <local:ACDateViewModel />
-                </Label.BindingContext>
-            </Label>
-
-
             <Button
                 x:Name="GenerateBtn"
                 Text="Click me"
                 SemanticProperties.Hint="Gets a random game"
                 Clicked="OnGenerateClicked"
                 HorizontalOptions="Center" />
+
+            <Label
+                x:Name="JuegoRandom"
+                Text="{Binding title}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="desc"
+                Text="{Binding short_description}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="genero"
+                Text="{Binding genre}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="platforma"
+                Text="{Binding platform}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="pub"
+                Text="{Binding publisher}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="dev"
+                Text="{Binding developer}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="estreno"
+                Text="{Binding release_date}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label Text="Fecha" />
+            <Label x:Name="fuente" FontSize="20"
+                Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
+                <Label.BindingContext>
+                    <local:ACDateViewModel />
+                </Label.BindingContext>
+            </Label>
+
 
         </VerticalStackLayout>
     </ScrollView>
