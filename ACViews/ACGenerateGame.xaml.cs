@@ -44,14 +44,6 @@ public partial class ACGenerateGame : ContentPage
             dev.Text = resultado[numLista].developer;
             estreno.Text = resultado[numLista].release_date;
 
-            // variables
-            //Item.title = resultado[numRnd].title;
-            //Item.short_description = resultado[numRnd].short_description;
-            //Item.genre = resultado[numRnd].genre;
-            //Item.platform = resultado[numRnd].platform;
-            //Item.publisher = resultado[numRnd].publisher;
-            //Item.developer = resultado[numRnd].developer;
-            //Item.release_date = resultado[numRnd].release_date;
 
         }
         response.Close();
@@ -82,8 +74,14 @@ public partial class ACGenerateGame : ContentPage
 
     private void OnSavedClicked(object sender, EventArgs e)
     {
+        Item.title = JuegoRandom.Text;
+        Item.short_description = desc.Text;
+        Item.genre = genero.Text;
+        Item.platform = platforma.Text;
+        Item.publisher = pub.Text;
+        Item.developer = dev.Text;
+        Item.release_date = estreno.Text;
 
-        //Item.Date = DateTime.ParseExact(fuente.Text, "0:dd/MM/yyyy HH:mm:ss", null);
         if (SaveBtn.Text == "Editar")
         {
             App.GameRepo.UpadateGame(Item);
