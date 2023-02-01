@@ -2,11 +2,63 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AntonellaCortes_PROGRESOFINAL.ACViews.ACGenerateGame"
-             Title="ACGenerateGame">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Generate Game">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="Titulo"
+                Text="¡Hola!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Por favor, ingresa tu nombre:"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="ACUserName" Text="{Binding UserName}"/>
+
+            <Label
+                Text="¿No sabes qué jugar? Haz clic en el botón para descubrir una sugerencia"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="JuegoRandom"
+                Text="{Binding title}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="desc"
+                Text="{Binding short_description}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="GenerateBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Gets a random game"
+                Clicked="OnGenerateClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
