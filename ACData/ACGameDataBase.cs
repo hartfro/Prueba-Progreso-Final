@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
-using AntonellaCortes_PROGRESOFINAL.Models;
+using AntonellaCortes_PROGRESOFINAL.ACModels;
 
-namespace AntonellaCortes_PROGRESOFINAL.Data
+namespace AntonellaCortes_PROGRESOFINAL.ACData
 {
     public class ACGameDataBase
     {

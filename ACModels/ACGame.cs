@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using TableAttribute = SQLite.TableAttribute;
 using MaxLengthAttribute = SQLite.MaxLengthAttribute;
 
-namespace AntonellaCortes_PROGRESOFINAL.Models
+namespace AntonellaCortes_PROGRESOFINAL.ACModels
 {
     [Table("game")]
     public class ACGame // registro de recomendaciones de juego

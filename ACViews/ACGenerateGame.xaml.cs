@@ -1,6 +1,6 @@
 using AntonellaCortes_PROGRESOFINAL.ACViewModels;
-using AntonellaCortes_PROGRESOFINAL.Models;
-using AntonellaCortes_PROGRESOFINAL.API;
+using AntonellaCortes_PROGRESOFINAL.ACModels;
+using AntonellaCortes_PROGRESOFINAL.ACAPI;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -20,7 +20,7 @@ public partial class ACGenerateGame : ContentPage
     private void OnGenerateClicked(object sender, EventArgs e)
     {
         WebRequest request = WebRequest.Create("https://www.freetogame.com/api/games");
-        //request.Headers.Add("X-TheySaidSo-Api-Secret", "YOUR API KEY HERE");
+        //request.Headers.Add("", "YOUR API KEY HERE");
         WebResponse response = request.GetResponse();
         //var client = new HttpClient();
 
@@ -28,7 +28,6 @@ public partial class ACGenerateGame : ContentPage
         {
             StreamReader reader = new StreamReader(dataStream);
             string responseFromServer = reader.ReadToEnd();
-            // este trim solo quita basura como dobles espacios y así
             responseFromServer = responseFromServer.Trim();
             var resultado = JsonConvert.DeserializeObject<List<Rootobject>>(responseFromServer); // nombre de la clase q viene de la api - og json - objeto
             // retorna lista

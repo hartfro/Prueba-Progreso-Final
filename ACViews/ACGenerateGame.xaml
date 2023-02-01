@@ -52,6 +52,41 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
+            <Label
+                x:Name="genero"
+                Text="{Binding genre}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="platforma"
+                Text="{Binding platform}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="pub"
+                Text="{Binding publisher}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="dev"
+                Text="{Binding developer}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="estreno"
+                Text="{Binding release_date}"
+                SemanticProperties.HeadingLevel="Level4"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
             <Button
                 x:Name="GenerateBtn"
                 Text="Click me"
