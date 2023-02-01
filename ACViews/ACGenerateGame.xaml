@@ -50,7 +50,21 @@
 
             <Label
                 x:Name="JuegoRandom"
+                Text="Título"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            
+            <Label
+                x:Name="JuegoRandom"
                 Text="{Binding title}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="Detalles"
+                Text="Título"
                 SemanticProperties.HeadingLevel="Level3"
                 FontSize="20"
                 HorizontalOptions="Center" />
@@ -97,14 +111,18 @@
                 FontSize="20"
                 HorizontalOptions="Center" />
 
-            <Label Text="Fecha" />
-            <Label x:Name="fuente" FontSize="20"
-                Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
-                <Label.BindingContext>
-                    <local:ACDateViewModel />
-                </Label.BindingContext>
-            </Label>
+            <VerticalStackLayout>
+                <Label Text="Fecha creacion: " FontSize="20" />
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}" />
+                <BoxView HeightRequest="0.8" Color="Gray" />
+            </VerticalStackLayout>
 
+            <Button
+                x:Name="SaveBtn"
+                Text="Guardar recomendación"
+                SemanticProperties.Hint="Saves rec game"
+                Clicked="OnSavedClicked"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>

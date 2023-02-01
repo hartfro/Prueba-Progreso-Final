@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:ACGenerateGame}"
+        ContentTemplate="{DataTemplate local:ACGameDetails}"
         Route="MainPage" />
 
 </Shell>

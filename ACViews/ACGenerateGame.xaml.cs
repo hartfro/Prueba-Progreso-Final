@@ -34,15 +34,15 @@ public partial class ACGenerateGame : ContentPage
             // generar num rec random
             Random rnd = new Random();
             int numRnd = rnd.Next(0, 200);
+            int numLista = numRnd;
 
-            JuegoRandom.Text = resultado[numRnd].title;
-            desc.Text = resultado[numRnd].short_description;
-            genero.Text = resultado[numRnd].genre;
-            platforma.Text = resultado[numRnd].platform;
-            pub.Text = resultado[numRnd].publisher;
-            dev.Text = resultado[numRnd].developer;
-            estreno.Text = resultado[numRnd].release_date;
-            fuente.Text = resultado[numRnd].release_date;
+            JuegoRandom.Text = resultado[numLista].title;
+            desc.Text = resultado[numLista].short_description;
+            genero.Text = resultado[numLista].genre;
+            platforma.Text = resultado[numLista].platform;
+            pub.Text = resultado[numLista].publisher;
+            dev.Text = resultado[numLista].developer;
+            estreno.Text = resultado[numLista].release_date;
 
             // variables
             //Item.title = resultado[numRnd].title;
@@ -67,7 +67,7 @@ public partial class ACGenerateGame : ContentPage
         if (value > -1)
         {
             Item = App.GameRepo.GetGame(value);
-            //SaveButton.Text = "Editar";
+            SaveBtn.Text = "Editar";
 
         }
 
@@ -83,8 +83,8 @@ public partial class ACGenerateGame : ContentPage
     private void OnSavedClicked(object sender, EventArgs e)
     {
 
-        /*Item.Date = DateTime.ParseExact(Fecha.Text, "dd/MM/yyyy HH:mm:ss", null);
-        if (SaveButton.Text == "Editar")
+        //Item.Date = DateTime.ParseExact(fuente.Text, "0:dd/MM/yyyy HH:mm:ss", null);
+        if (SaveBtn.Text == "Editar")
         {
             App.GameRepo.UpadateGame(Item);
         }
@@ -92,7 +92,7 @@ public partial class ACGenerateGame : ContentPage
         {
             App.GameRepo.AddNewGame(Item);
         }
-        Shell.Current.GoToAsync("..");*/
+        Shell.Current.GoToAsync("..");
     }
 
     private void OnCancelClicked(object sender, EventArgs e)
