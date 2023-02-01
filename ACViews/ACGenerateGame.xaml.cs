@@ -1,4 +1,3 @@
-using AntonellaCortes_PROGRESOFINAL.ACViewModels;
 using AntonellaCortes_PROGRESOFINAL.ACModels;
 using AntonellaCortes_PROGRESOFINAL.ACAPI;
 using System.Net;
@@ -37,15 +36,22 @@ public partial class ACGenerateGame : ContentPage
             int numRnd = rnd.Next(0, 200);
 
             JuegoRandom.Text = resultado[numRnd].title;
+            desc.Text = resultado[numRnd].short_description;
+            genero.Text = resultado[numRnd].genre;
+            platforma.Text = resultado[numRnd].platform;
+            pub.Text = resultado[numRnd].publisher;
+            dev.Text = resultado[numRnd].developer;
+            estreno.Text = resultado[numRnd].release_date;
+            fuente.Text = resultado[numRnd].release_date;
 
             // variables
-            Item.title = resultado[numRnd].title;
-            Item.short_description = resultado[numRnd].short_description;
-            Item.genre = resultado[numRnd].genre;
-            Item.platform = resultado[numRnd].platform;
-            Item.publisher = resultado[numRnd].publisher;
-            Item.developer = resultado[numRnd].developer;
-            Item.release_date = resultado[numRnd].release_date;
+            //Item.title = resultado[numRnd].title;
+            //Item.short_description = resultado[numRnd].short_description;
+            //Item.genre = resultado[numRnd].genre;
+            //Item.platform = resultado[numRnd].platform;
+            //Item.publisher = resultado[numRnd].publisher;
+            //Item.developer = resultado[numRnd].developer;
+            //Item.release_date = resultado[numRnd].release_date;
 
         }
         response.Close();

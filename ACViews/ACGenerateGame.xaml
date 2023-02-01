@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:models="clr-namespace:AntonellaCortes_PROGRESOFINAL.ACModels"
+             xmlns:local="clr-namespace:AntonellaCortes_PROGRESOFINAL.ACViewModels"
              x:Class="AntonellaCortes_PROGRESOFINAL.ACViews.ACGenerateGame"
              Title="Generate Game">
     <ScrollView>
@@ -86,6 +89,15 @@
                 SemanticProperties.HeadingLevel="Level4"
                 FontSize="32"
                 HorizontalOptions="Center" />
+
+            <Label Text="Fecha" />
+            <Label x:Name="fuente"
+                Text="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}">
+                <Label.BindingContext>
+                    <local:ACDateViewModel />
+                </Label.BindingContext>
+            </Label>
+
 
             <Button
                 x:Name="GenerateBtn"
