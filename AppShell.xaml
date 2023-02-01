@@ -3,12 +3,12 @@
     x:Class="AntonellaCortes_PROGRESOFINAL.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AntonellaCortes_PROGRESOFINAL"
+    xmlns:local="clr-namespace:AntonellaCortes_PROGRESOFINAL.ACViews"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:ACGenerateGame}"
         Route="MainPage" />
 
 </Shell>
