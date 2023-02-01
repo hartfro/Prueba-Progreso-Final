@@ -16,8 +16,9 @@ namespace AntonellaCortes_PROGRESOFINAL.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public DateTime Date { get; set; }
-        public string ACUserName { get; set; }
+        public DateTime Date { get; set; } // automático sistema
+        public string UserName { get; set; } // ingresa el usuario
+        public string Review { get; set; } // ingresa el usuario
         public string title { get; set; }
         //public string thumbnail { get; set; }
         public string short_description { get; set; }
